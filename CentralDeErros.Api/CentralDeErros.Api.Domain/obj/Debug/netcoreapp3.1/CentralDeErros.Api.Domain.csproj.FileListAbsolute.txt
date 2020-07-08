@@ -1,0 +1,9 @@
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.deps.json
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.dll
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.pdb
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.csprojAssemblyReference.cache
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.AssemblyInfoInputs.cache
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.AssemblyInfo.cs
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.dll
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Domain\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.pdb

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pO2TxvBOBF6BdckT6t3oVSoCwBep0BQMb636isHvNXUOCx52sKBSckR1XHZTM6cAJw6j+UaXd2DFvG6FFWP0fA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fabiano\\codenation\\CentralDeErros.Api\\CentralDeErros.Api\\CentralDeErros.Api\\CentralDeErros.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralDeErros.Api", "CentralDeErros.Api\CentralDeErros.Api.csproj", "{051240CC-AEC3-49D0-BF89-0F32D74D625A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralDeErros.Api.Domain", "CentralDeErros.Api.Domain\CentralDeErros.Api.Domain.csproj", "{8C90C374-A6B1-422E-8B3F-75A74E9F80C0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{051240CC-AEC3-49D0-BF89-0F32D74D625A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051240CC-AEC3-49D0-BF89-0F32D74D625A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051240CC-AEC3-49D0-BF89-0F32D74D625A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051240CC-AEC3-49D0-BF89-0F32D74D625A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C90C374-A6B1-422E-8B3F-75A74E9F80C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C90C374-A6B1-422E-8B3F-75A74E9F80C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C90C374-A6B1-422E-8B3F-75A74E9F80C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C90C374-A6B1-422E-8B3F-75A74E9F80C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBBEE899-04F5-4D5E-B2A7-7CA3DC9D853E}
+	EndGlobalSection
+EndGlobal
