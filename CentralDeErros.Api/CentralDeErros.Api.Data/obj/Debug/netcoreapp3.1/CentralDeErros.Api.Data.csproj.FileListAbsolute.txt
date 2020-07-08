@@ -1,0 +1,15 @@
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Data.deps.json
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Data.dll
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Data.csprojAssemblyReference.cache
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Data.AssemblyInfoInputs.cache
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Data.AssemblyInfo.cs
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Data.runtimeconfig.json
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Data.runtimeconfig.dev.json
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Data.pdb
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.dll
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\bin\Debug\netcoreapp3.1\CentralDeErros.Api.Domain.pdb
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Data.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Data.csproj.CopyComplete
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Data.dll
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Data.pdb
+C:\Users\Fabiano\codenation\CentralDeErros.Api\CentralDeErros.Api\CentralDeErros.Api.Data\obj\Debug\netcoreapp3.1\CentralDeErros.Api.Data.genruntimeconfig.cache

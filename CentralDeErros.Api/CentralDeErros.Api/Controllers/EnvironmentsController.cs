@@ -59,9 +59,9 @@ namespace CentralDeErros.Api.Controllers
 
         // DELETE api/<EnvironmentsController>/5
         [HttpDelete("{id}")]
-        public IEnumerable<Environment> Delete(int environmentid)
+        public IEnumerable<Environment> Delete(int id)
         {
-            var environment = lst.FirstOrDefault(x => x.EnvironmentId == environmentid);
+            var environment = lst.FirstOrDefault(x => x.EnvironmentId == id);
             if (environment != null) lst.Remove(environment);
 
             return lst;

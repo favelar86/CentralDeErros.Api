@@ -16,8 +16,14 @@ namespace CentralDeErros.Api.Domain.Models
 
         public int UserId { get; set; }
 
+        public Users User { get; set; }
+
         public int ErrorId { get; set; }
 
+        public Error Error { get; set; }
+
         public int SituationId { get; set; }
+
+        public Situation Situation { get; set; }
     }
 }

@@ -9,5 +9,7 @@ namespace CentralDeErros.Api.Domain.Models
         public int EnvironmentId { get; set; }
 
         public string EnvironmentName { get; set; }
+
+        public ICollection<Error> Errors { get; set; }
     }
 }

@@ -9,5 +9,7 @@ namespace CentralDeErros.Api.Domain.Models
         public int SituationId { get; set; }
 
         public string SituationName { get; set; }
+
+        public ICollection<ErrorOccurrence> ErrorOccurrences { get; set; }
     }
 }

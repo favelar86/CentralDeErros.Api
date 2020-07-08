@@ -5,6 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CentralDeErros.Api.Data\CentralDeErros.Api.Data.csproj" />
     <ProjectReference Include="..\CentralDeErros.Api.Domain\CentralDeErros.Api.Domain.csproj" />
   </ItemGroup>
 

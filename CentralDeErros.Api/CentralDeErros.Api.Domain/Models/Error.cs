@@ -16,6 +16,10 @@ namespace CentralDeErros.Api.Domain.Models
 
         public int EnvironmentId { get; set; }
 
+        public Environment Environment { get; set;  }
+
         public int LevelId { get; set; }
+
+        public Level Level { get; set; }
     }
 }

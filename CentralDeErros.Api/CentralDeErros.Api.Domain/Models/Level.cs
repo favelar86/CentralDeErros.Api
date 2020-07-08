@@ -9,5 +9,7 @@ namespace CentralDeErros.Api.Domain.Models
         public int LevelId { get; set; }
 
         public string LevelName { get; set; }
+
+        public ICollection<Error> Errors { get; set; }
     }
 }
