@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using CentralDeErros.Api.Domain.Models;
+using CentralDeErros.Api.Data.Map;
+using CentralDeErros.Api.Data.Repository;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,59 +13,49 @@ namespace CentralDeErros.Api.Controllers
     [ApiController]
     public class EnvironmentsController : ControllerBase
     {
-        List<Environment> lst;
+        private EnvironmentsRepository _repo;
 
         public EnvironmentsController()
         {
-            lst = new List<Environment>();
-            lst.Add(new Environment() { EnvironmentId = 1, EnvironmentName = "Produção" });
-            lst.Add(new Environment() { EnvironmentId = 2, EnvironmentName = "Homologação" });
-            lst.Add(new Environment() { EnvironmentId = 3, EnvironmentName = "Dev" });
+            _repo = new EnvironmentsRepository();
         }
-
-        // GET: api/<EnvironmentsController>
+      
+        // GET: api/<Environments>
         [HttpGet]
         public IEnumerable<Environment> Get()
         {
-            return lst;
+            return _repo.RetornarTodos(); 
         }
 
-        // GET api/<EnvironmentsController>/5
+        // GET api/<Environments>/5
         [HttpGet("{id}")]
         public Environment Get(int id)
         {
-            return lst.FirstOrDefault(x => x.EnvironmentId == id);
+            return _repo.BuscarPorId(id);
         }
 
-        // POST api/<EnvironmentsController>
+        // POST api/<Environments>
         [HttpPost]
         public IEnumerable<Environment> Post([FromBody] Environment environment)
         {
-            lst.Add(environment);
-            return lst;
+            _repo.Incluir(environment);
+            return _repo.RetornarTodos();
         }
 
-        // PUT api/<EnvironmentsController>/5
-        [HttpPut("{id}")]
-        public IEnumerable<Environment> Put(int id, [FromBody] Environment name)
+        // PUT api/<Environments>/5
+        [HttpPut]
+        public IEnumerable<Environment> Put([FromBody] Environment name)
         {
-            int index = lst.FindIndex(x => x.EnvironmentId == id);
-            if (index > -1)
-            {
-                lst[index].EnvironmentName = name.EnvironmentName;
-            }
-
-            return lst;
+            _repo.Alterar(name);
+            return _repo.RetornarTodos();
         }
 
-        // DELETE api/<EnvironmentsController>/5
+        // DELETE api/<Environments>/5
         [HttpDelete("{id}")]
         public IEnumerable<Environment> Delete(int id)
         {
-            var environment = lst.FirstOrDefault(x => x.EnvironmentId == id);
-            if (environment != null) lst.Remove(environment);
-
-            return lst;
+            _repo.Excluir(id);
+            return _repo.RetornarTodos();
         }
     }
 }

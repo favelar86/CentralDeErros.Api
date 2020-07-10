@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using CentralDeErros.Api.Domain.Repository;
+using System;
 
 namespace CentralDeErros.Api.Domain.Models
 {
-    public class ErrorOccurrence
+    public class ErrorOccurrence : IEntity
     {
         public int ErrorOccurrenceId { get; set; }
 
@@ -25,5 +24,6 @@ namespace CentralDeErros.Api.Domain.Models
         public int SituationId { get; set; }
 
         public Situation Situation { get; set; }
+        public int Id { get; set; }
     }
 }
