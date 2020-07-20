@@ -3,10 +3,12 @@ using CentralDeErros.Api.Data.Repository;
 using CentralDeErros.Api.Domain.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
 namespace CentralDeErros.Api
 {
@@ -22,18 +24,25 @@ namespace CentralDeErros.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers()
+               .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling =
+              Newtonsoft.Json.ReferenceLoopHandling.Ignore); ;
 
             services.AddScoped(typeof(IRepositoryBase<>), typeof(RepositoryBase<>));
             services.AddScoped<IEnvironmentRepository, EnvironmentsRepository>();
             services.AddScoped<IErrorOccurrenceRepository, ErrorOccurrenceRepository>();
             services.AddScoped<IErrorRepository, ErrorRepository>();
             services.AddScoped<ILevelRepository, LevelRepository>();
-            services.AddScoped<ISituationRepository, SituationRepository>();
             services.AddScoped<IUsersRepository, UsersRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             services.AddDbContext<Context>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("MinhaConexao")));
+
+            services.AddSwaggerGen(x => x.SwaggerDoc(name: "v1", new OpenApiInfo { Title = "CentralDeErros.Api", Version = "v1" }));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<Context>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,7 +53,17 @@ namespace CentralDeErros.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI(x =>
+            {
+                x.SwaggerEndpoint(url: "/swagger/v1/swagger.json", name: "Api Central de Erros");
+            });
+
+            app.UseHttpsRedirection();
+
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

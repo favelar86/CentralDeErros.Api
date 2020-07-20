@@ -1,11 +1,7 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using CentralDeErros.Api.Domain.Models;
-using CentralDeErros.Api.Data.Map;
-using CentralDeErros.Api.Data.Repository;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using CentralDeErros.Api.Domain.Repository;
 
 namespace CentralDeErros.Api.Controllers
 {
@@ -13,25 +9,25 @@ namespace CentralDeErros.Api.Controllers
     [ApiController]
     public class EnvironmentsController : ControllerBase
     {
-        private EnvironmentsRepository _repo;
+        private readonly IEnvironmentRepository _repo;
 
-        public EnvironmentsController()
+        public EnvironmentsController(IEnvironmentRepository repo)
         {
-            _repo = new EnvironmentsRepository();
+            _repo = repo;
         }
       
         // GET: api/<Environments>
         [HttpGet]
         public IEnumerable<Environment> Get()
         {
-            return _repo.RetornarTodos(); 
+            return _repo.SelecionarTodos(); 
         }
 
         // GET api/<Environments>/5
         [HttpGet("{id}")]
         public Environment Get(int id)
         {
-            return _repo.BuscarPorId(id);
+            return _repo.SelecionarPorId(id);
         }
 
         // POST api/<Environments>
@@ -39,7 +35,7 @@ namespace CentralDeErros.Api.Controllers
         public IEnumerable<Environment> Post([FromBody] Environment environment)
         {
             _repo.Incluir(environment);
-            return _repo.RetornarTodos();
+            return _repo.SelecionarTodos();
         }
 
         // PUT api/<Environments>/5
@@ -47,7 +43,7 @@ namespace CentralDeErros.Api.Controllers
         public IEnumerable<Environment> Put([FromBody] Environment name)
         {
             _repo.Alterar(name);
-            return _repo.RetornarTodos();
+            return _repo.SelecionarTodos();
         }
 
         // DELETE api/<Environments>/5
@@ -55,7 +51,7 @@ namespace CentralDeErros.Api.Controllers
         public IEnumerable<Environment> Delete(int id)
         {
             _repo.Excluir(id);
-            return _repo.RetornarTodos();
+            return _repo.SelecionarTodos();
         }
     }
 }

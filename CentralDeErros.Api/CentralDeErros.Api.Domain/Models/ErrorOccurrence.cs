@@ -5,7 +5,7 @@ namespace CentralDeErros.Api.Domain.Models
 {
     public class ErrorOccurrence : IEntity
     {
-        public int ErrorOccurrenceId { get; set; }
+        public int Id { get; set; }
 
         public string Origin { get; set; }
 
@@ -20,10 +20,5 @@ namespace CentralDeErros.Api.Domain.Models
         public int ErrorId { get; set; }
 
         public Error Error { get; set; }
-
-        public int SituationId { get; set; }
-
-        public Situation Situation { get; set; }
-        public int Id { get; set; }
     }
 }

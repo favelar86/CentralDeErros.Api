@@ -10,8 +10,7 @@ namespace CentralDeErros.Api.Data.Map
         public DbSet<Error> Errors { get; set; }
         public DbSet<ErrorOccurrence> ErrorOccurrences { get; set; }
         public DbSet<Level> Levels { get; set; }
-        public DbSet<Situation> Situations { get; set; }
-        public DbSet<Users> Users { get; set; }
+        public DbSet<Users> User { get; set; }
 
        public Context(DbContextOptions<Context> options)
             : base(options)
@@ -25,7 +24,6 @@ namespace CentralDeErros.Api.Data.Map
             modelBuilder.ApplyConfiguration(new ErrorMap());
             modelBuilder.ApplyConfiguration(new ErrorOccurrenceMap());
             modelBuilder.ApplyConfiguration(new LevelMap());
-            modelBuilder.ApplyConfiguration(new SituationMap());
             modelBuilder.ApplyConfiguration(new UsersMap());
 
             base.OnModelCreating(modelBuilder);

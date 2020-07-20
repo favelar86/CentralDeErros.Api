@@ -6,8 +6,7 @@ namespace CentralDeErros.Api.Domain.Models
 {
     public class Users : IEntity
     {
-        [Key]
-        public int UserId { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
 
@@ -16,7 +15,5 @@ namespace CentralDeErros.Api.Domain.Models
         public string Password { get; set; }
 
         public ICollection<ErrorOccurrence> ErrorOccurrences { get; set; }
-
-        public int Id { get; set; }
     }
 }

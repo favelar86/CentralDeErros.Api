@@ -10,7 +10,7 @@ namespace CentralDeErros.Api.Data.Map
         {
             builder.ToTable("LEVEL");
 
-            builder.HasKey(x => x.LevelId);
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.LevelName)
                 .HasColumnType("varchar(30)")

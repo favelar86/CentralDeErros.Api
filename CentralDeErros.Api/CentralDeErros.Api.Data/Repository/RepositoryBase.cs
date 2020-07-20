@@ -42,5 +42,10 @@ namespace CentralDeErros.Api.Data.Repository
         {
             return _contexto.Set<T>().ToList();
         }
+
+        public void Dispose()
+        {
+            _contexto.Dispose();
+        }
     }
 }

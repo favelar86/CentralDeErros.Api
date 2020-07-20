@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CentralDeErros.Api", "Centr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CentralDeErros.Api.Domain", "CentralDeErros.Api.Domain\CentralDeErros.Api.Domain.csproj", "{8C90C374-A6B1-422E-8B3F-75A74E9F80C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralDeErros.Api.Data", "CentralDeErros.Api.Data\CentralDeErros.Api.Data.csproj", "{AB303ED8-817D-4A1B-9FC9-5CE4749F24C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CentralDeErros.Api.Data", "CentralDeErros.Api.Data\CentralDeErros.Api.Data.csproj", "{AB303ED8-817D-4A1B-9FC9-5CE4749F24C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

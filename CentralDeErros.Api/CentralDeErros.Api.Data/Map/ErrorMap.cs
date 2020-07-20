@@ -9,8 +9,8 @@ namespace CentralDeErros.Api.Data.Map
         public void Configure(EntityTypeBuilder<Error> builder)
         {
             builder.ToTable("Error");
-
-            builder.HasKey(x => x.ErrorId);
+    
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Code)
                 .HasColumnType("int")
@@ -24,14 +24,13 @@ namespace CentralDeErros.Api.Data.Map
                 .HasColumnType("varchar(500)")
                 .IsRequired();
 
-            builder.HasOne<Environment>(e => e.Environment)
+            builder.HasOne(e => e.Environment)
                 .WithMany(er => er.Errors)
                 .HasForeignKey(i => i.EnvironmentId);
 
-            builder.HasOne<Level>(l => l.Level)
+            builder.HasOne(l => l.Level)
                .WithMany(er => er.Errors)
                .HasForeignKey(i => i.LevelId);
-
         }
     }
 }

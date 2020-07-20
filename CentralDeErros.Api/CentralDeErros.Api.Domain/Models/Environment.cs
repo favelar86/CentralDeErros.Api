@@ -5,11 +5,9 @@ namespace CentralDeErros.Api.Domain.Models
 {
     public class Environment : IEntity
     {
-        public int EnvironmentId { get; set; }
-
+        public int Id { get; set; }
         public string EnvironmentName { get; set; }
 
-        public ICollection<Error> Errors { get; set; }
-        public int Id { get; set; }
+        public ICollection<Error> Errors { get; set; }       
     }
 }

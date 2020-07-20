@@ -10,10 +10,10 @@ namespace CentralDeErros.Api.Data.Map
         {
             builder.ToTable("Environment");
 
-            builder.HasKey(x => x.EnvironmentId);
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.EnvironmentName)
-                .HasColumnType("string")
+                .HasColumnType("varchar(200)")
                 .IsRequired();
         }
     }

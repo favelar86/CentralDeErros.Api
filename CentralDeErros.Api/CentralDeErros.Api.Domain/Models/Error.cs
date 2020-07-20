@@ -1,10 +1,11 @@
 ﻿using CentralDeErros.Api.Domain.Repository;
+using System.Collections.Generic;
 
 namespace CentralDeErros.Api.Domain.Models
 {
     public class Error : IEntity
     {
-        public int ErrorId { get; set; }  
+        public int Id { get; set; }
 
         public int Code { get; set; }
 
@@ -19,6 +20,7 @@ namespace CentralDeErros.Api.Domain.Models
         public int LevelId { get; set; }
 
         public Level Level { get; set; }
-        public int Id { get; set; }
+
+        public ICollection<ErrorOccurrence> ErrorOccurrence { get; set; }
     }
 }

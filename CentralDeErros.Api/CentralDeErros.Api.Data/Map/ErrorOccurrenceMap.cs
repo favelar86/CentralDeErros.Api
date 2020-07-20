@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using CentralDeErros.Api.Domain.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Security.Cryptography.X509Certificates;
 
 namespace CentralDeErros.Api.Data.Map
 {
@@ -10,7 +11,7 @@ namespace CentralDeErros.Api.Data.Map
         {
             builder.ToTable("Error_OCCURRENCE");
 
-            builder.HasKey(x => x.ErrorOccurrenceId);
+            builder.HasKey(x => x.Id);
 
             builder.Property(x => x.Origin)
                 .HasColumnType("varchar(200)")
@@ -24,18 +25,13 @@ namespace CentralDeErros.Api.Data.Map
                 .HasColumnType("smalldatetime")
                 .IsRequired();
 
-            builder.HasOne<Users>(u => u.User)
+            builder.HasOne(u => u.User)
                 .WithMany(er => er.ErrorOccurrences)
                 .HasForeignKey(x => x.UserId);
 
-            builder.Property(x => x.ErrorId)
-                .HasColumnType("Error")
-                .IsRequired();
-
-            builder.Property(x => x.SituationId)
-                .HasColumnType("Situation")
-                .IsRequired();
-
+            builder.HasOne(e => e.Error)
+                .WithMany(er => er.ErrorOccurrence)
+                .HasForeignKey(x => x.ErrorId);
         }
     }
 }
