@@ -19,10 +19,6 @@ namespace CentralDeErros.Api.Data.Map
             builder.Property(x => x.Email)
                 .HasColumnType("varchar(200)")
                 .IsRequired();
-
-            builder.Property(x => x.Password)
-                .HasColumnType("varchar(50)")
-                .IsRequired();
         }
     }
 }

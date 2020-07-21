@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using CentralDeErros.Api.Domain.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Security.Cryptography.X509Certificates;
 
 namespace CentralDeErros.Api.Data.Map
 {

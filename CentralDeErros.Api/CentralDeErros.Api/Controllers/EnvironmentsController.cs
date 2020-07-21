@@ -2,9 +2,11 @@
 using Microsoft.AspNetCore.Mvc;
 using CentralDeErros.Api.Domain.Models;
 using CentralDeErros.Api.Domain.Repository;
+using Microsoft.AspNetCore.Authorization;
 
 namespace CentralDeErros.Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class EnvironmentsController : ControllerBase

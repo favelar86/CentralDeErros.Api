@@ -79,8 +79,7 @@ namespace CentralDeErros.Api.Data.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "varchar(200)", nullable: false),
-                    Email = table.Column<string>(type: "varchar(200)", nullable: false),
-                    Password = table.Column<string>(type: "varchar(50)", nullable: false)
+                    Email = table.Column<string>(type: "varchar(200)", nullable: false)
                 },
                 constraints: table =>
                 {
